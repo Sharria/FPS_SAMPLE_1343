@@ -1,9 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class Gun : MonoBehaviour
-{
+public class Gun : MonoBehaviour{
+    /*Sharri'a Code Start*/
+    public UnityEvent updateAmmo;
+    void Awake(){
+        updateAmmo = new UnityEvent();
+    }
+    /*Sharri'a Code End*/
+
     // references
     [SerializeField] Transform gunBarrelEnd;
     [SerializeField] GameObject bulletPrefab;
